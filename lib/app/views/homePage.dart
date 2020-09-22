@@ -14,6 +14,7 @@ class HomePage extends StatelessWidget {
         title: Text('Simple Todo List'),
         centerTitle: true,
         actions: [
+          // Theme Changer added
           IconButton(
             icon: Icon(Icons.wb_sunny),
             onPressed: () {
