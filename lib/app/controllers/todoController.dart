@@ -9,7 +9,7 @@ class TodoController extends GetxController {
   void onInit() {
     List savedTodo = GetStorage().read<List>("todo");
     if (!savedTodo.isNull) {
-      todoList = savedTodo.map((e) => Todo.fromMap(e)).toList().obs;
+      todoList = savedTodo.map((e) => Todo.fromJson(e)).toList().obs;
     }
 
     //Write to Storage whenever there's any change in todoList.

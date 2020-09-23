@@ -11,14 +11,14 @@ class Todo {
     this.isFinished,
   });
 
-  factory Todo.fromMap(Map<String, dynamic> map) => Todo(
+  factory Todo.fromJson(Map<String, dynamic> map) => Todo(
         title: map["title"],
         description: map["description"],
         createdAt: DateTime.parse(map["createdAt"]),
         isFinished: map["isFinished"],
       );
 
-  Map<String, dynamic> toMap() => {
+  Map<String, dynamic> toJson() => {
         "title": title,
         "description": description,
         "createdAt": createdAt.toIso8601String(),
