@@ -4,6 +4,7 @@ import 'package:get_storage/get_storage.dart';
 import 'package:simple_todo/app/views/homePage.dart';
 
 void main() async {
+  WidgetsFlutterBinding.ensureInitialized();
   await GetStorage.init();
   runApp(MyApp());
 }
